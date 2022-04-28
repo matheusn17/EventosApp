@@ -1,0 +1,53 @@
+﻿@page "/usuarios_json"
+@inject HttpClient Http
+@using EventApp.web.Shared
+
+<PageTitle>Usuarios</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Usuarios</MudText>
+<MudText Class="mb-8">Esta tabela mostra alguns dados de usuários presentes no arquivo /dados/usuarios.json.</MudText>
+@if (users == null)
+{
+    <MudProgressCircular Color="Color.Default" Indeterminate="true" />
+}
+else
+{
+    <MudTable RowsPerPage="5" Items="users" Hover="true" SortLabel="Sort By" Elevation="0">
+        <HeaderContent>
+            <MudTh><MudTableSortLabel InitialDirection="SortDirection.Ascending" SortBy="new Func<user, object>(x=>x.id)">Id</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<user, object>(x=>x.name)">Nome</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<user, object>(x=>x.username)">Apelido de usuario</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<user, object>(x=>x.email)">email</MudTableSortLabel></MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="id">@context.id</MudTd>
+            <MudTd DataLabel="name">@context.name</MudTd>
+            <MudTd DataLabel="username">@context.username</MudTd>
+            <MudTd DataLabel="email">@context.email</MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager PageSizeOptions="new int[]{50, 100}" />
+        </PagerContent>
+    </MudTable>
+}
+
+
+@code {
+    private user[]? users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Dados obtidos em https://jsonplaceholder.typicode.com/  :D
+        users = await Http.GetFromJsonAsync<user[]>("dados/users.json");
+    }
+    public class user
+    {
+        public int id { get; set; }
+
+        public String name { get; set; }
+
+        public String username { get; set; }
+
+        public String email {get ; set;}
+    }
+}

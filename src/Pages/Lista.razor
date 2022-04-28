@@ -1,0 +1,33 @@
+@page "/lista"
+
+<h2>Lista (@Itens.Count itens)</h2>
+
+<MudPaper Label="asfasf" id="ListPaper" MaxHeight="200px" Width="100%" class="overflow-scroll">
+    <MudList class="overflow-x-scroll">
+        @foreach (var item in Itens)
+        {
+                <MudListItem Text="@item"/>
+        }
+    </MudList>
+</MudPaper>
+<MudTextField @bind-Value="ItemText" @bind-Label="LabelText" Variant="Variant.Text"></MudTextField>
+<MudButton OnClick="() => AddItem(Itens, ItemText, LabelText)" Variant="Variant.Filled" runat="client">Adicionar elemento</MudButton>
+
+@code {
+    String LabelText = "Adicione até 10 itens";
+    List<String> Itens = new List<String>{"Arroz", "Banana", "Alface"};
+
+    public string ItemText { get; set; } = "";
+
+    public int AddItem(List<String> ItemList, String ItemToAdd, String LabelText){
+        if(ItemToAdd == ""){
+            return 0;
+        }else if(ItemList.Count > 9){
+            return 0;
+        }
+
+        ItemList.Add(ItemToAdd);
+        ItemText = "";
+        return 0;
+    }
+}
