@@ -4,9 +4,9 @@ App web feito para obtenção parcial de nota na disciplina Programando Web do p
 
 ## Requisitos
 
-dotnet >= 6.0
-git
-Vs code ou Visual Studio (Opcional)
+dotnet >= 6.0<br />
+git<br />
+Vs code ou Visual Studio (Opcional)<br />
 
 ## Para rodar o App...
 
