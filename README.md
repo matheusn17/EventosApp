@@ -11,9 +11,9 @@ Vs code ou Visual Studio (Opcional)
 ## Para rodar o App...
 
 Com VS Code/Visual Studio:
-	%
-	Clone e descompacte o projeto
-	Abra o Vscode na Pasta src/ e rode o .sln atraves do Solution Explorer
+
+    % Clone e descompacte o projeto
+    % Abra o Vscode na Pasta src/ e rode o .sln atraves do Solution Explorer
 
 Pelo teminal:
 
