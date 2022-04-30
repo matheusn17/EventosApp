@@ -13,7 +13,7 @@ Vs code ou Visual Studio (Opcional)
 Com VS Code/Visual Studio:
 
     % Clone e descompacte o projeto
-    % Abra o Vscode na Pasta src/ e rode o .sln atraves do Solution Explorer
+    % Abra o Vscode na Pasta src/ e rode o .sln atraves do Solution Explorer do VS Code/Visual Studio
 
 Pelo teminal:
 
