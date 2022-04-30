@@ -1,0 +1,60 @@
+﻿@page "/events_json_cards"
+@inject HttpClient Http
+@using EventApp.web.Shared
+
+<PageTitle>Eventos</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Eventos</MudText>
+@if (Events == null)
+{
+    <MudProgressCircular Color="Color.Default" Indeterminate="true" />
+}
+else
+{
+    foreach(var Event in Events){
+        <MudGrid Justify="Justify.Center">
+            <MudItem></MudItem>
+            <MudItem spacing="3" class="mud-width-full">
+                <MudCard>
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h5">@Event.name</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardMedia  Image="@Event.picture" />
+                    <MudCardContent>
+                        <MudText Typo="Typo.body2">Data do evento: @Event.eventDate</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+            <MudItem></MudItem>
+        </MudGrid>
+    }
+}
+
+
+@code {
+
+
+    private EventsData[]? Events;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Dados obtidos em https://jsonplaceholder.typicode.com/  :D
+        Events = await Http.GetFromJsonAsync<EventsData[]>("dados/events.json");
+    }
+
+    // 'event' é uma palavra reservada no C#
+
+    public class EventsData    {
+        public int id { get; set; }
+        public String name {get ; set; }
+
+        public String address { get; set; }
+
+        public String eventDate { get; set; }
+        public String about { get; set; }
+        public String picture { get; set; }
+
+    }
+}

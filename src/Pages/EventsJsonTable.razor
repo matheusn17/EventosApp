@@ -1,0 +1,55 @@
+﻿@page "/events_json_table"
+@inject HttpClient Http
+@using EventApp.web.Shared
+
+<PageTitle>Eventos</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Eventos</MudText>
+<MudText Class="mb-8">Esta tabela mostra alguns dados dos eventos registrados no arquivo /dados/clientes.json. Os dados foram parcialmente obtidos no json-generator.com</MudText>
+@if (Events == null)
+{
+    <MudProgressCircular Color="Color.Default" Indeterminate="true" />
+}
+else
+{
+    <MudTable RowsPerPage="5" Items="Events" Hover="true" SortLabel="Organizar por" Elevation="0">
+        <HeaderContent>
+            <MudTh><MudTableSortLabel InitialDirection="SortDirection.Ascending" SortBy="new Func<EventsData, object>(x=>x.id)">Id</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<EventsData, object>(x=>x.name)">Nome do evento</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<EventsData, object>(x=>x.address)">Endereço</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<EventsData, object>(x=>x.eventDate)">Data do evento</MudTableSortLabel></MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="id">@context.id</MudTd>
+            <MudTd DataLabel="nome">@context.name</MudTd>
+            <MudTd DataLabel="endereco">@context.address</MudTd>
+            <MudTd DataLabel="data">@context.eventDate</MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager PageSizeOptions="new int[]{50, 100}" />
+        </PagerContent>
+    </MudTable>
+}
+
+
+@code {
+    private EventsData[]? Events;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Dados obtidos em https://jsonplaceholder.typicode.com/  :D
+        Events = await Http.GetFromJsonAsync<EventsData[]>("dados/events.json");
+    }
+
+    // 'event' é uma palavra reservada no C#
+
+    public class EventsData    {
+        public int id { get; set; }
+        public String name {get ; set; }
+
+        public String address { get; set; }
+
+        public String eventDate { get; set; }
+
+    }
+}

@@ -1611,11 +1611,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/matheus/Área de Trabalho/EventApp.web/EventApp.web.csproj",
+      "projectUniqueName": "/home/matheus/Área de Trabalho/EventApp.web/src/EventApp.web.csproj",
       "projectName": "EventApp.web",
-      "projectPath": "/home/matheus/Área de Trabalho/EventApp.web/EventApp.web.csproj",
+      "projectPath": "/home/matheus/Área de Trabalho/EventApp.web/src/EventApp.web.csproj",
       "packagesPath": "/home/matheus/.nuget/packages/",
-      "outputPath": "/home/matheus/Área de Trabalho/EventApp.web/obj/",
+      "outputPath": "/home/matheus/Área de Trabalho/EventApp.web/src/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/matheus/.nuget/NuGet/NuGet.Config"

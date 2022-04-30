@@ -1,16 +1,32 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-1BfpyVPt0YHXXLAt4nHKXVd+E6krkH1NbXlaKFx61Ak=",
-      "url": "dados\/dbCreationScrit.sql"
+      "hash": "sha256-7cqLnqval2PUCibZlbBqdxRdhJdC9U+qnSFFGqX0+rg=",
+      "url": "assets\/contrariar.jpg"
     },
     {
-      "hash": "sha256-HUe+hphG+hmOdlrqWag27H8Piz4r9K2LG\/URCwzaOGA=",
-      "url": "dados\/users.db"
+      "hash": "sha256-eDqlybVoz2Lwqdvx0VWHZ7QZsMxMTM13pceYMSN3kUk=",
+      "url": "assets\/pisa_menos.jpg"
     },
     {
-      "hash": "sha256-v7pmPiIh5c4FRNoCRH6L5ecxbjOuDV9H5yvc8nDVDsM=",
-      "url": "dados\/users.json"
+      "hash": "sha256-GN+ljrdLQcHb0XP1k9BbgT42N3zk\/6M7+EAPQngkxCM=",
+      "url": "assets\/raca_negra.jpg"
+    },
+    {
+      "hash": "sha256-+UwdfuJPj8hKuKiTWLSO+9lCfQ575iJXIaoNTmnLCHw=",
+      "url": "assets\/saudade_ex.png"
+    },
+    {
+      "hash": "sha256-oTX4LGW8XQHnW9Xo9ndzNY9XBdiYtBRU8VTYGJQfhPc=",
+      "url": "assets\/sorriso.png"
+    },
+    {
+      "hash": "sha256-+QozZmm1B3vGgaX7OmEQTvjA0uItIMhQONYtKhoVNIs=",
+      "url": "assets\/xitaozinho_e_xororo.jpg"
+    },
+    {
+      "hash": "sha256-yki0wPiytmZ3NDBENJE2o5P9E0TQLgvSewW8cknQHQU=",
+      "url": "dados\/events.json"
     },
     {
       "hash": "sha256-FHAQv5tCX8yHcGkL\/8AFhL0PtUWgEoaN6XjY+hoCblo=",
@@ -817,11 +833,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-QyAMgsau8IVUriHhge2cbFtDMjfBndntOfwPW1FNcQg=",
+      "hash": "sha256-EZr\/4XISCvQ+D2HoaVzjFyDIcYpdO4f\/\/s9C1qxppGk=",
       "url": "_framework\/EventApp.web.dll"
     },
     {
-      "hash": "sha256-WYc6gtdbRuEyIKxc0P4Jvr8grRtprjwHUxvRaGgZBLY=",
+      "hash": "sha256-TuE5U1g4TFgCYUoGO6T+jBRWxmKo88BV9kozgeUsDMc=",
       "url": "_framework\/EventApp.web.pdb"
     },
     {
@@ -829,7 +845,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-lDogUtzI\/nWLF5Hs+tUcsj8v3uXLQldsSrhSgOqmsjc=",
+      "hash": "sha256-TLRUUrUddr+Yd4EMMBF6PdWuRq0mwDQRGApkHLMduQk=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -841,5 +857,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "lUT+o4K7"
+  "version": "Nq6m\/yUT"
 };
