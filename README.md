@@ -20,4 +20,4 @@ Pelo teminal:
     % git clone https://github.com/matheusn17/Lilu_ProgramandoWeb
     % cd Lilu_ProgramandoWeb/src/
     % dotnet watch run
-    % Abra seu navegador no link 127.0.0.1:5001
+    % Abra seu navegador no link localhost:5001

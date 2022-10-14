@@ -1,16 +1,17 @@
 ﻿@page "/"
 
 <PageTitle>Index</PageTitle>
-
 <MudText Typo="Typo.h3" GutterBottom="true">App de Eventos</MudText>
 <MudText Class="mb-8">Bem vindo!</MudText>
-<MudText Class="mb-8">Esse APP mostra os eventos a ocorrer a partir de um arquivo de dados JSON. Clique em um dos menus ao lado para ver os eventos.</MudText>
+<MudText Class="mb-8">Esse APP mostra os eventos ficticios a ocorrer a partir de um arquivo de dados JSON. Clique em um dos menus ao lado para ver os eventos.</MudText>
+<MudAlert Severity="Severity.Normal">
 <MudText Class="mb-8">Infelizmente, o APP não cumpre com todos os requisitos exigidos. Abaixo, a lista do que foi feito:</MudText>
-<MudList>
-    <MudListItem>Ser responsivo ✓</MudListItem>
-    <MudListItem>Ter uma página inicial de apresentação do projeto ✓</MudListItem>
-    <MudListItem>Ter um menu de navegação ✓</MudListItem>
-    <MudListItem>Ter pelo menos 1 componente parametrizado ✓</MudListItem>
-    <MudListItem>Ter uma página que mostre os dados de um arquivo JSON em formato de tabela ✓</MudListItem>
-    <MudListItem>Ter uma página que mostre os dados de uma tabela em um banco de dados em formato de Card ✗ (Os dados são mostrados em card, mas vem não de um banco de dados e sim de um JSON)</MudListItem>
-</MudList>
+    <MudList>
+        <MudListItem>Ser responsivo ✓</MudListItem>
+        <MudListItem>Ter uma página inicial de apresentação do projeto ✓</MudListItem>
+        <MudListItem>Ter um menu de navegação ✓</MudListItem>
+        <MudListItem>Ter pelo menos 1 componente parametrizado ✓</MudListItem>
+        <MudListItem>Ter uma página que mostre os dados de um arquivo JSON em formato de tabela ✓</MudListItem>
+        <MudListItem>Ter uma página que mostre os dados de uma tabela em um banco de dados em formato de Card ✗ (Os dados são mostrados em card, mas não vem de um banco de dados e sim do JSON previamente criado no item anterior)</MudListItem>
+    </MudList>
+</MudAlert>
