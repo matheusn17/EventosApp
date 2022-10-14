@@ -1,4 +1,4 @@
-# Lilu_ProgramandoWeb
+# EventosApp
 
 App web feito para obtenção parcial de nota na disciplina Programando Web do professor LiLo.
 
@@ -17,7 +17,7 @@ Com VS Code/Visual Studio:
 
 Pelo teminal:
 
-    % git clone https://github.com/matheusn17/Lilu_ProgramandoWeb
-    % cd Lilu_ProgramandoWeb/src/
+    % git clone https://github.com/matheusn17/EventosApp.git
+    % cd EventosApp/src/
     % dotnet watch run
     % Abra seu navegador no link localhost:5001
